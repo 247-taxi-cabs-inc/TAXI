@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "705051320894",
+    "project_id": "ridess-ad554",
+    "storage_bucket": "ridess-ad554.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705051320894:android:a08a67dee5cfc8b503276f",
+        "android_client_info": {
+          "package_name": "taxitime.net"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705051320894-2cu1qvr0d75eqqv43el4m9qfntmelvsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKvBmYS-PDsHevCOh4I8IXBeC-sayfG0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705051320894-2cu1qvr0d75eqqv43el4m9qfntmelvsa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "705051320894-05htkjg4ocdrj5do7g9ii93rogh322nd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "limotaxi247.com"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

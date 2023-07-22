@@ -1,0 +1,75 @@
+{
+  "name": "projects/limo-taxi-247-356719/alertPolicies/2051120178583185312",
+  "displayName": "Welcome to the Platform Ridess",
+  "documentation": {
+    "content": "Thank you & Welcome to the platform. Rideshare Solutions Happy to Serves you!",
+    "mimeType": "text/markdown"
+  },
+  "userLabels": {
+    "request": "dispatch",
+    "payment-option": "payment-option",
+    "business-account": "business-account",
+    "profile": "user-profile",
+    "regular": "regular",
+    "group": "group",
+    "account-type": "account-type",
+    "add-a-member": "add-member",
+    "history": "user-history",
+    "remove-memebr": "remove-member",
+    "location": "customer-location",
+    "driver-location": "driver-location",
+    "vip": "vip",
+    "history-location": "location-history"
+  },
+  "conditions": [
+    {
+      "name": "projects/limo-taxi-247-356719/alertPolicies/2051120178583185312/conditions/2051120178583185795",
+      "displayName": "Global - Log bucket monthly bytes ingested",
+      "conditionThreshold": {
+        "aggregations": [
+          {
+            "alignmentPeriod": "300s",
+            "perSeriesAligner": "ALIGN_MEAN"
+          },
+          {
+            "alignmentPeriod": "60s",
+            "crossSeriesReducer": "REDUCE_COUNT",
+            "groupByFields": [
+              "metric.label.log_source",
+              "metric.label.resource_type",
+              "metric.label.log_bucket_location",
+              "metric.label.log_bucket_id",
+              "resource.label.project_id",
+              "project"
+            ],
+            "perSeriesAligner": "ALIGN_COUNT"
+          }
+        ],
+        "comparison": "COMPARISON_GT",
+        "duration": "0s",
+        "filter": "resource.type = \"global\" AND resource.labels.project_id = \"limo-taxi-247-356719\" AND metric.type = \"logging.googleapis.com/billing/log_bucket_monthly_bytes_ingested\" AND metric.labels.log_bucket_location = \"global\"",
+        "thresholdValue": 95,
+        "trigger": {
+          "count": 1
+        }
+      }
+    }
+  ],
+  "alertStrategy": {
+    "autoClose": "1800s"
+  },
+  "combiner": "OR",
+  "enabled": true,
+  "notificationChannels": [
+    "projects/limo-taxi-247-356719/notificationChannels/18319855927962954498",
+    "projects/limo-taxi-247-356719/notificationChannels/9463475512359923045"
+  ],
+  "creationRecord": {
+    "mutateTime": "2023-06-25T12:39:33.579057859Z",
+    "mutatedBy": "fleet@taxitime.net"
+  },
+  "mutationRecord": {
+    "mutateTime": "2023-06-25T12:39:33.579057859Z",
+    "mutatedBy": "fleet@taxitime.net"
+  }
+}
